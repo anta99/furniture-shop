@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap'); //Dancing Script
+$siva:#d6d6d6;
+//$glavnaBoja:#f46958;
+$glavnaBoja:#f46517;
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+a{
+    color:#000;
+    text-decoration: none;
+    &:hover{
+        color: $glavnaBoja !important;
+        text-decoration: none;
+    }
+}
+img{
+    width:100%;
+}
+ul{
+    list-style-type: none;
+}
+textarea{
+    resize: none;
+}
+.btn:focus{
+    background-color: none;
+    box-shadow: none;
+    
+}
+.clearFocus{
+    &:focus{
+        box-shadow:none;
+        border-color: $glavnaBoja;
+    }
+}
+.row{
+    margin:0px;
+}
+.col-12,.container-fluid{
+    padding: 0px;
+}
+.naslovSekcije{
+    font-size:50px;
+    @media screen and(max-width:500px){
+        font-size:35px;
+    }
+}
+header{
+    border-bottom: 1px solid $glavnaBoja;
+}
+.navTraka{
+    background-color: $siva;
+    position: fixed;
+    top:0;
+    z-index: 999;
+    a{
+        border-right: 2px solid #000;
+        padding-right:10px;
+        &:last-child{
+            border-right: 2px solid transparent;
+            
+        }
+    }
+    
+}
+#naziv{
+    font-family: 'Dancing Script', cursive;
+    a{
+        font-size: 40px;
+    }
+}
+.heder{
+    margin-top: 25px;
+}
+.navigacija{
+    a{
+        color:$glavnaBoja !important;
+        font-size: 20px;
+        opacity: 0.7;
+        &:hover{
+           opacity: 1;
+        }
+    }
+}
+.carousel-inner{
+    max-height: 85vh !important;
+}
+.carousel-indicators li{
+    background-color: $glavnaBoja;
+}
+// .natpis{
+//     top:40%;
+//     left:0;
+//     right: 0;
+//     margin:0px auto;
+//     background-color: #d4d6d4;
+//     width:30%;
+//     text-align: center;
+// }
+
+//Najprodavaniji proizvodi
+.card-title{
+    font-size: 40px;
+    margin: 0px;
+}
+.cena{
+    font-size:35px;
+    font-weight: 600;
+    color: $glavnaBoja;
+}
+// .kategorija{
+//     color: $siva;
+// }
+.proizvod{
+    border-color: transparent;
+    transition: .5s;
+    &:hover{
+        border-color:$glavnaBoja;
+    }
+    h5{
+        @media screen and (max-width:1100px){
+            font-size:25px;
+        }
+    }
+}
+.dugme{
+    border: 2px solid $glavnaBoja;
+    font-size: 20px;
+    &:hover{
+        background-color:$glavnaBoja;
+        color:#fff !important;
+    }
+    &:focus{
+        background-color: none;
+        box-shadow: none;
+        
+    }
+}
+.dodajUKorpu{
+    font-size:30px;
+}
+.dodajProizvod{
+    font-size:20px;
+}
+//Usluge
+
+
+//Footer
+footer{
+    background-color: $siva;
+}
+.soc{
+    i{
+        font-size:30px;
+    }
+    
+}
+
+//Proizvodi
+.filteri{
+    @media screen and (max-width:767px){
+        display: none;
+    }
+}
+#sortDdl{
+    padding:5px;
+    border: 2px solid $glavnaBoja;
+}
+#pretraga{
+    padding: 5px;
+    width:70%;
+    border: none;
+    transition: .5s;
+    border-bottom: 2px solid $siva;
+    &:focus{
+        border-color: $glavnaBoja;
+    }
+}
+.pretragaBtn{
+    border-radius: 0px;
+    padding:0px;
+    i{
+        font-size:25px;
+    }
+    &:hover,:active{
+        color:$glavnaBoja;
+    }
+}
+.activeFilters{
+    font-size:35px;
+    margin-bottom: 20px;
+    
+    i{
+        font-size:35px;
+        
+        @media screen and (min-width:768px){
+            display: none;
+        }
+    }
+}
+.page-link{
+    color:$glavnaBoja !important;
+}
+.page-item.active .page-link {
+    background-color: $glavnaBoja;
+    color:#fff !important;
+	border-color: $glavnaBoja;
+}
+.page-item.disabled .page-link {
+	color: $siva !important;
+}
+.disabled:hover{
+    cursor: no-drop;
+}
+#prazno{
+    //position: fixed;
+    padding:30vh;
+    margin-top:20px;
+    width:100%;
+    background-color: $siva;
+    text-align: center;
+    @media screen and (max-width:800px) {
+        padding:10vh ;
+    }
+}
+.fa-angle-down{
+    cursor: pointer;
+}
+//Proizvod
+.karakteristike{
+    background-color: $siva;
+    ul{
+        padding:10px;
+    }
+}
+.opis{
+    font-size:18px;
+}
+.slicica{
+    border: 2px solid $siva;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.activeImage{
+    border-color: $glavnaBoja;
+}
+//Kontakt
+.radnjaInfo{
+    color: $glavnaBoja;
+}
+.forma{
+    padding:10px;
+    input{
+        transition: .5s;
+        padding:5px;
+        &:focus{
+            box-shadow:none;
+            border-color: $glavnaBoja;
+        }
+    }
+}
+#kontaktPoruka{
+    width:100%;
+    transition: .5s;
+    border-radius: .25rem;
+    padding:5px;
+    border: 1px solid $siva;
+    resize: none;
+    &:focus{
+        border-color: $glavnaBoja;
+    }
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+	border-color: $glavnaBoja !important;
+	background-color: $glavnaBoja !important;
+}
+//Korpa
+.nazivProizvoda{
+    //font-size:20px;
+    padding-top:7vh;
+    @media screen and(max-width:300px) {   
+        h2{
+            font-size:18px;
+        }
+    }
+}
+.jedanArtikal{
+    border: 2px solid $glavnaBoja;
+}
+.korpaCena{
+    font-size:25px;
+}
+.abs{
+    position: absolute;
+    top:10px;
+    right:0;
+    left:0;
+    margin:0px auto;
+    @media screen and (max-width:800px){
+       position: static;
+       //margin-bottom: 20px;
+    }
+}
+.kat{
+    padding-top:80px;
+    @media screen and(max-width:800px){
+        padding-top: 0px;
+        padding-bottom:10px ;
+    }
+}
+.remove{
+    position: absolute;
+    right:15px;
+    top:0px;
+    cursor: pointer;
+    &::before{
+        font-size: 30px;
+    }
+}
+.ukupnaCena{
+    border: 2px solid $glavnaBoja;
+    span{
+        font-size: 40px;
+        //color:$siva;
+        @media screen and(min-width:760px) and (max-width:1000px){
+            font-size:25px;
+        }
+        @media screen and(max-width:500px){
+            font-size:30px;
+        }
+        @media screen and(max-width:320px){
+            font-size:25px;
+        }
+    }
+    
+}
+.praznaKorpa{
+    font-size:50px;
+    margin-top: 50px;
+}
+.nazadKup{
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 30px
+
+}
+.table thead th {
+	border-bottom: 2px solid $glavnaBoja;
+}
+//Profil
+.userMeni{
+    background-color: $siva;
+    height:100vh;
+    @media screen and(max-width:768px){
+        height:auto;
+    }
+}
+.prikaz{
+    background-color: red;
+}
+.list-group-item{
+    border-radius: 0px;
+}
+.list-group-item:last-child {
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.list-group-item:first-child {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+.list-group-item-action:focus, .list-group-item-action:hover {
+	color: black !important;
+}
+.list-group-item.active {
+	background-color: $glavnaBoja;
+    border-color: $glavnaBoja;
+    color: #fff !important;
+}
+.izmena{
+    font-size: 20px;
+    cursor: pointer;
+}
+#proizvodAdmin{
+    i{
+        font-size:25px;
+        margin-left:10px;
+    }
+}
+//Izmena proizvoda
+.izmenaPolje{
+    width:50%;
+    @media screen and (max-width:978px) {
+        width:100%;
+    }
+}
+.greskaUpdate{
+    display: none;
+}
+.uspesnoDodat{
+    position: fixed;
+    top:15%;
+    width:50%;
+    left: 0;
+    right:0;
+    display: none;
+    @media screen and (max-width:850px){
+        width:100%;
+    }
+}
+#dodavanjeGreske{
+    display: none;
+}
+#uspehClose{
+    cursor: pointer;
+}
+.inboxHead{
+    border-bottom: 2px solid $siva;
+}
+.message{
+    border:1px solid $siva;
+    border-top: none;
+}
+.procitaj{
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.poruka{
+    display: none;
+    a{
+        font-size:20px;
+        color: $glavnaBoja;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.odgovorArea{
+    width: 100%;
+    padding:10px;
+    resize: none;
+    //display: block;
+}
